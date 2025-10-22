@@ -1,4 +1,6 @@
 # Maze Generation Project
+## Description
+This project is created by 3 TU Berlin student at the end of the module named "Computer Orinetierte Mathematik". The aim of this project is to create a maze generator that has its starting point and end point randomly generated within the maze and solve it immediately after the generation of the maze. The programming language that is used here is Julia.
 
 ## Setup
 Setup is simply initializing an n-m grid, with each element in the grid as a node object (Julia has a base datatype called Matrix{Node}([...])). The values of n and m are given as inputs for the maze function.
@@ -26,4 +28,5 @@ RHR details:
 Src:
 - https://medium.com/swlh/maze-generation-with-depth-first-search-and-recursive-backtracking-869f5c4496ad
 - https://www.youtube.com/watch?v=gHU5RQWbmWE
+
 
