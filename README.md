@@ -33,7 +33,7 @@ This should be as simple as possible. Due to the nature of the maze datatype as 
 
 
 DFS details:
-- It should have a stack (obviously). This stack should take its neighbours as values. Due to the ambiguity of the task I am unsure whether the neighbour function we have to make is supposed to give neighbours before or after the maze generation, so for now, don't use it.
+- It should have a stack (obviously). This stack should take its neighbours as values.
 - Have a visited list. This stores all the nodes that has already been visited. Before a new neighbour is added into the stack, check this list first.
 - The loop should run until the length of the visited list equal to n x m.
 - The node value 'key' stores the start and end nodes. The datatype is up to you peeps, as long as it stores a clear and start value (e.g: str, int, bool, etc...)
