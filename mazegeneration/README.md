@@ -13,8 +13,9 @@ A simple Julia module for generating and visualizing random mazes using Depth-Fi
 2. Navigate to your project folder:
 3. Use the following command:
 
-```julia
- include("MazeGeneration.jl")
+`julia
+ include("MazeGeneration.jl")'
+
 
 
 
