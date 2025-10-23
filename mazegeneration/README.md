@@ -15,7 +15,8 @@ This project is created by 3 TU Berlin student (Sebastianus Dustin Susanto, Greg
 ````julia
 MazeGeneration.maze(5,5)
 ````
-The size of the maze can be any integer. Do keep in mind that larger mazes will cause it to load longer. It is recmmonded to have a limit of 20x20 maze.
+The size of the maze can be any size. Do keep in mind that larger mazes will cause it to load longer. It is recmmonded to have a limit of 20x20 maze.
+
 
 
 
