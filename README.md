@@ -1,30 +1,26 @@
 # Maze Generation Project
-## Main Course
-### Setup
-Setup is simply initializing an n-m grid, with each element in the grid as a node object (Julia has a base datatype called Matrix{Node}([...])). The values of n and m are given as inputs for the maze function.
-
-### Backtracking DFS
-This should be as simple as possible. Due to the nature of the maze datatype as a matrix, the struct node can hold the coords of its neighbours as a tuple with (x, y) values. We start by selecting 2 random numbers within the scope of the matrix. To make life easier in the solver portion, we CAN force the beginning to start at the edges so that it only has to choose from 3 sides (this however is optional). Continuing from this the code will use DFS (the one with the stack not the recursive one, this way we can preserve backtracking). This dfs will run until there are in total n x m number of nodes. Thus the generation for the maze should be done.
+## Description
+This project is created by 3 TU Berlin student (Sebastianus Dustin Susanto, Gregorius Kevin Soetanto, Georgius Kenneth Liauwangsa) at the end of the module named "Computer Orinetierte Mathematik". The aim of this project is to create a maze generator that has its starting point and end point randomly generated within the maze and solve it immediately after the generation of the maze. The programming language that is used here is Julia ver 1.10.2.
 
 
-DFS details:
-- It should have a stack (obviously). This stack should take its neighbours as values.
-- Have a visited list. This stores all the nodes that has already been visited. Before a new neighbour is added into the stack, check this list first.
-- The loop should run until the length of the visited list equal to n x m.
-- The node value 'key' stores the start and end nodes. The datatype is up to you peeps, as long as it stores a clear and start value (e.g: str, int, bool, etc...)
-- Each time a neighbour is added into the stack, make sure to add its coordinates as the current nodes left, middle or right value.
+## How to Run
+
+1. Open a Julia REPL.
+2. Navigate to your project folder:
+3. Use the following command to include the file:
+```julia
+ include("MazeGeneration.jl")
+````
+4. Run the program with the following line:
+````julia
+MazeGeneration.maze(5,5)
+````
+The size of the maze can be any size. Do keep in mind that larger mazes will cause it to load longer. It is recmmonded to have a limit of 20x20 maze.
 
 
-### Solver
-The right hand rule is a simple way to solve a maze (simple doesn't mean fast). As mentioned in the backtracking dfs section, the complicated part is the starting node. We must choose the correct direction for the code to run correctly. After the selection process, the code should be simple as it will always check clockwise.
 
-RHR details:
-- Make a vector of nodes to save the path taken by the player
-- Use the neighbours function to check the possible visited nodes, IF its supposed to give neighbours after maze generation. If not, see next.
-- Check the nodes clockwise and DO NOT ADD ALL THE NEIGHBOURS TO THE VECTOR. Simply add the right most neighbour after checking clockwise.
-- The beginning will the be the most complicated as it has to determine which is the right most wall. Keep in mind that it might be easier to save the direction of where the player is looking at.
-- Does not need a visited list. The player/ pointer can go back the same way it came essentially
 
-Src:
-- https://medium.com/swlh/maze-generation-with-depth-first-search-and-recursive-backtracking-869f5c4496ad
-- https://www.youtube.com/watch?v=gHU5RQWbmWE
+
+
+
+
