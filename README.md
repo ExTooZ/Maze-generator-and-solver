@@ -1,30 +1,5 @@
 # Maze Generation Project
-
-## 1. Setup
-### This struct has freedom of choice so any additions or revisions are fine but as a basis, it should have the following
-- struct Node
-    - Values:
-        - key::(Pilih sendiri)
-        - coords::Tuple(Int, Int)
-        - up::Union{Tuple(Int, Int), Nothing}
-        - left::Union{Tuple(Int, Int), Nothing}
-        - bottom::Union{Tuple(Int, Int), Nothing}
-        - right::Union{Tuple(Int, Int), Nothing}
-    - Functions:
-        - neighbours(node::Node)
-### This struct is fixed so we will only include the given values
-- struct Maze
-    - Values:
-        - nodes::Matrix{Node}
-        - visual::Union{MazeViz, Nothing}
-        - path::Union{Vector{Node}, Nothing}
-    - Functions:
-        - maze(height::Int, width::Int)
-- struct MazeViz
-    - Values:
-    - Functions
-
-## 2. Main Course
+## Main Course
 ### Setup
 Setup is simply initializing an n-m grid, with each element in the grid as a node object (Julia has a base datatype called Matrix{Node}([...])). The values of n and m are given as inputs for the maze function.
 
